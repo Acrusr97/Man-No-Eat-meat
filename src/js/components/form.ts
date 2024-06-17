@@ -4,20 +4,18 @@ const LGFBUTTON =document.querySelectorById('log-off-button');*/
 
 import input from "./input.js";
 import {submitButton} from "./button.js";
-export default function (data){
-    return(
-        `
+export  function form (data) {
+  return `
         <form id="${data.id}" class"form">
           <section>
-               ${data.inputs.map((el,index) => input(el)).join('')}
+               ${data.inputs.map((el, index) => input(el)).join("")}
 
          </section>
           <section>
-              ${data.inputs.map((el,index) => submitButton(el)).join('')}
+              ${data.inputs.map((el, index) => submitButton(el)).join("")}
 
           </section>
 
         </form>
-        `
-    )
+        `;
 }

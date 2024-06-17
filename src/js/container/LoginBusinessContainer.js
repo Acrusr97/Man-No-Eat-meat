@@ -1,8 +1,7 @@
 import form from "../components/form.js";
 
 export class LoginBusinessContainer {
-  data;
-  constructor() {
+  constructor(data) {
     this.data = {
       id: "login-form",
       inputs: [
@@ -31,19 +30,20 @@ export class LoginBusinessContainer {
 
     const loginMain = document.getElementById("login-main");
     loginMain.innerHTML += form(this.data);
-    const loginForm = document.getElementById("login-form")
-    const self =this
+    const loginForm = document.getElementById("login-form");
+    const self = this;
     loginForm.onsubmit = (e) => self.onSubmit(e);
-    loginForm.addEventListener('reset',function(){
-      self.onReset()
-    })
+    loginForm.addEventListener("reset", function () {
+      self.onReset();
+    });
   }
 
   onSubmit(e) {
-    e.presentDefault()
+    e.presentDefault();
     console.log("Cliquez sur le formulaire");
   }
   onReset() {
     console.log("Reset le formulaire");
   }
 }
+export default LoginBusinessContainer;

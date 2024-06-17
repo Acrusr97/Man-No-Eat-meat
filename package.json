@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "prettier": "^3.3.2",
     "typescript": "^5.4.5"
   },
   "scripts": {
+    "format": "npx prettier --write .",
     "trans": "tsc --project ."
   },
   "keywords": [],
-  "author": "",
+  "author": "Billy Jo",
   "license": "ISC",
-  "description": ""
+  "description": "westindies food"
 }
