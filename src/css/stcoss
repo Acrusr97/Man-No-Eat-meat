@@ -1,0 +1,22 @@
+html {
+
+}
+main {
+    min-height: 100vh;
+    display: flex;
+
+}
+img{
+    object-fit: cover;
+    
+}
+.app_hearder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    /*&> permet d'affecter des valeurs au enfants direct . 
+}

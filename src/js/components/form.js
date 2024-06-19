@@ -1,28 +1,20 @@
-"use strict";
-/*const LSUBOUTTON =document.querySelectorById('login-submit-button');
-const LGOBUTTON =document.querySelectorById('log-out-button');
-const LGFBUTTON =document.querySelectorById('log-off-button');*/
-Object.defineProperty(exports, "__esModule", { value: true });
-var input_js_1 = require("./input.js");
-var button_js_1 = require("./button.js");
-export function form(data) {
-  return '\n        <form id="'
-    .concat(data.id, '" class"form">\n          <section>\n               ')
-    .concat(
-      data.inputs
-        .map(function (el, index) {
-          return (0, input_js_1.default)(el);
-        })
-        .join(""),
-      "\n\n         </section>\n          <section>\n              ",
-    )
-    .concat(
-      data.inputs
-        .map(function (el, index) {
-          return (0, button_js_1.submitButton)(el);
-        })
-        .join(""),
-      "\n\n          </section>\n\n        </form>\n        ",
+import button from "./button.js"
+import input from "./input.js"
+
+const form = function (data){
+    
+    return (
+        `
+        <form class ="form" id="${data.formId}">
+        <section>
+        ${data.inputs.map(ainp => input(ainp))}
+        </section>
+        <section>
+        ${data.buttons.map(abut => button(abut))}
+        </section>
+        
+        </form>
+        `
     );
 }
-export default form;
+export default form
